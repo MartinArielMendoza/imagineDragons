@@ -28,7 +28,8 @@ body {
 }
 
 header {
-    background: rgb(0, 0, 0);
+    padding: 5px;
+    margin: 0px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(68, 68, 68, 1) 65%, rgba(162, 162, 162, 1) 100%);
 }
 
@@ -61,20 +62,13 @@ p {
     font-size: 4vw;
 }
 
-.banda img {
-    width: 98%;
-    height: auto;
-    margin: 5px auto;
-    padding: 10%;
-}
-
 body {
-    background: rgb(255, 8, 0);
     background: linear-gradient(180deg, rgba(255, 8, 0, 1) 0%, rgba(255, 42, 0, 1) 47%, rgba(255, 102, 0, 1) 100%);
 }
 
 footer {
-    background: rgb(0, 0, 0);
+    padding: 4px;
+    margin-bottom: 0;
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(68, 68, 68, 1) 65%, rgba(162, 162, 162, 1) 100%);
     color: white;
 }
@@ -93,8 +87,8 @@ header {
     grid-area: intro;
 }
 
-.banda {
-    grid-area: banda;
+.carouselExampleIndicators {
+    grid-area: carousel;
 }
 
 footer {
@@ -105,7 +99,61 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "header" "intro" "banda" "footer";
+    grid-template-areas: "header" "intro" "carousel" "footer";
+}
+
+.canciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.canciones h2 {
+    font-size: 5vw;
+    color: white;
+}
+
+audio {
+    width: 300px;
+    height: 42px;
+}
+
+.song {
+    background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/fondo.jpg);
+    margin-bottom: -30%;
+    background-size: 30%;
+}
+
+.indicaciones {
+    font-size: 24px;
+}
+
+.conciertos h2 {
+    color: white;
+    font-size: 1.3em;
+}
+
+.conciertos a {
+    color: white;
+    text-decoration: underline;
+    font-size: 1em;
+    padding: 25px;
+}
+
+.conciertos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conciertos img {
+    margin: 10px;
+    height: 10em;
+    width: 15em;
+}
+
+.carousel-inner {
+    margin-bottom: 50px;
 }
 
 @media(min-width:600px) {
@@ -113,7 +161,10 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        font-size: 1.30em;
+        font-size: 1em;
+    }
+    header {
+        padding: 12px;
     }
     .container-footer footer ul {
         display: flex;
@@ -130,6 +181,13 @@ footer {
     p {
         font-size: 3vw;
     }
+    .canciones {
+        display: grid;
+        grid-template: repeat(10, 100px) / repeat(2, 1fr);
+        align-items: center;
+        justify-items: center;
+        row-gap: 40px;
+    }
 }
 
 @media(min-width:768px) {
@@ -137,7 +195,7 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        padding: 30px;
+        padding: 20px;
     }
     h1 {
         font-size: 2.5vw;
@@ -145,19 +203,22 @@ footer {
     p {
         font-size: 1.5vw;
     }
-}
-
-.song {
-    background-image: url(../img/fondo.jpg);
-    margin-bottom: -30%;
-    background-size: 30%;
-}
-
-.canciones h2 {
-    color: white;
-    text-align: left;
-    font-size: 32px;
-    margin: 1%;
+    .canciones h2 {
+        text-align: left;
+        font-size: 32px;
+        margin: 1%;
+    }
+    audio {
+        margin: 3%;
+        padding: 0%;
+    }
+    .conciertos img {
+        height: 19em;
+        width: 25em;
+    }
+    .conciertos a {
+        font-size: 1.5em;
+    }
 }
 
 .noticias h2 {
@@ -171,11 +232,6 @@ footer {
     text-align: left;
     font-size: 25px;
     margin: 2%;
-}
-
-audio {
-    margin: 3%;
-    padding: 0%;
 }
 
 .historia img {
@@ -198,35 +254,4 @@ audio {
 
 .noticias li {
     padding: 2%;
-}
-
-.angeles {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.conciertos h2 {
-    color: white;
-    margin: 3%;
-    padding-top: 25px;
-}
-
-.conciertos a {
-    color: white;
-    margin: 30%;
-    text-decoration: underline;
-    font-size: 25px;
-}
-
-.indicaciones {
-    font-size: 24px;
-}
-
-.canciones {
-    display: grid;
-    grid-template: repeat(10, 100px) / repeat(2, 1fr);
-    align-items: center;
-    justify-items: center;
-    row-gap: 40px;
 }
