@@ -1,0 +1,26 @@
+.intro {
+    grid-area: intro;
+}
+
+.carouselExampleIndicators {
+    grid-area: carousel;
+    margin-bottom: 10px;
+    .carousel-inner {
+        margin-bottom: 50px;
+    }
+}
+
+footer {
+    grid-area: footer;
+}
+
+header {
+    grid-area: header;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "header" "intro" "carousel" "footer";
+}

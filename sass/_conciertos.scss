@@ -1,0 +1,22 @@
+.conciertos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+        font-size: 1.6em;
+    }
+    img {
+        margin: 10px;
+        height: 10em;
+        width: 15em;
+    }
+    .indicaciones {
+        font-size: 24px;
+    }
+    a {
+        color: white;
+        text-decoration: underline;
+        font-size: 1em;
+        padding: 25px;
+    }
+}

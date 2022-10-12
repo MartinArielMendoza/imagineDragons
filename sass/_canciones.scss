@@ -1,0 +1,18 @@
+.song {
+    background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/fondo.jpg);
+    margin-bottom: -30%;
+    background-size: 30%;
+    .canciones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            font-size: 5vw;
+            color: white;
+        }
+        audio {
+            width: 300px;
+            height: 42px;
+        }
+    }
+}
