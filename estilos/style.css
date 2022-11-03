@@ -8,29 +8,58 @@
 body {
   color: white;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(180deg, rgb(255, 8, 0) 0%, rgb(255, 42, 0) 47%, rgb(255, 102, 0) 100%);
+  background: rgb(115, 0, 167);
+  background: radial-gradient(circle, rgb(115, 0, 167) 24%, rgb(16, 0, 69) 80%);
+}
+@media (min-width: 600px) {
+  body {
+    background: rgb(195, 124, 0);
+    background: radial-gradient(circle, rgb(195, 124, 0) 21%, rgb(167, 75, 0) 73%);
+  }
+}
+@media (min-width: 768px) {
+  body {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/fondo.jpg);
+    background-position: center;
+  }
 }
 body h1 {
-  font-size: 2em;
   text-align: center;
+  margin: 50px;
+  font-size: 2em;
 }
-body p {
-  padding: 5%;
+@media (min-width: 600px) {
+  body h1 {
+    font-size: 3em;
+  }
+}
+body h2 {
+  font-size: 1em;
+  margin: 30px;
+}
+@media (min-width: 600px) {
+  body h2 {
+    font-size: 2em;
+  }
 }
 
 header {
-  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(68, 68, 68) 65%, rgb(162, 162, 162) 100%);
+  background: rgb(97, 97, 97);
+  background: radial-gradient(circle, rgb(97, 97, 97) 0%, rgb(0, 0, 0) 62%);
 }
-header nav {
+
+nav {
+  padding: 15px;
   margin: 0px;
 }
-header nav ul {
+
+ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-header nav ul a {
+ul a {
   text-decoration: none;
   color: white;
   text-align: center;
@@ -69,7 +98,7 @@ header {
 }
 
 .song {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/fondo.jpg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/fondo-canciones.jpg);
   margin-bottom: -30%;
   background-size: 30%;
 }
@@ -78,13 +107,35 @@ header {
   flex-direction: column;
   align-items: center;
 }
-.song .canciones h2 {
+@media (min-width: 600px) {
+  .song .canciones {
+    display: grid;
+    grid-template: repeat(10, 100px)/repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    row-gap: 40px;
+  }
+}
+.song h2 {
   font-size: 5vw;
   color: white;
 }
-.song .canciones audio {
+@media (min-width: 768px) {
+  .song h2 {
+    text-align: left;
+    font-size: 3.5vw;
+    margin: 1%;
+  }
+}
+.song audio {
   width: 300px;
   height: 42px;
+}
+@media (min-width: 768px) {
+  .song audio {
+    margin: 3%;
+    padding: 0%;
+  }
 }
 
 .conciertos {
@@ -100,6 +151,12 @@ header {
   height: 10em;
   width: 15em;
 }
+@media (min-width: 768px) {
+  .conciertos img {
+    height: 25em;
+    width: 32em;
+  }
+}
 .conciertos .indicaciones {
   font-size: 24px;
 }
@@ -109,48 +166,46 @@ header {
   font-size: 1em;
   padding: 25px;
 }
-
-.subtitulos {
-  color: black;
-}
-
-.container-events {
-  color: black;
-}
-
 @media (min-width: 600px) {
-  header nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    font-size: 1em;
-  }
-  header {
-    padding: 12px;
-  }
-  .container-footer footer ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  .container-footer h2 {
+  .conciertos a {
     font-size: 1.5em;
-    text-align: start;
-  }
-  h1 {
-    font-size: 4.5vw;
-  }
-  p {
-    font-size: 3vw;
-  }
-  .canciones {
-    display: grid;
-    grid-template: repeat(10, 100px)/repeat(2, 1fr);
-    align-items: center;
-    justify-items: center;
-    row-gap: 40px;
   }
 }
+
+.noticias h2 {
+  color: white;
+  text-align: left;
+  font-size: 2em;
+  margin: 2%;
+}
+.noticias p {
+  font-size: 1em;
+  margin: 15px;
+  padding: 10px;
+}
+.noticias .pasados {
+  text-decoration: line-through;
+  color: #FFC300;
+}
+.noticias .proximos {
+  color: #FFC300;
+}
+.noticias h3 {
+  color: #FFC300;
+  text-align: left;
+  font-size: 1.5em;
+  margin: 2%;
+}
+.noticias p {
+  font-size: 1.2em;
+  margin: 2%;
+}
+
+p {
+  font-size: 1.2em;
+  margin: 15px;
+}
+
 @media (min-width: 768px) {
   header nav ul {
     display: flex;
@@ -158,42 +213,7 @@ header {
     justify-content: space-around;
     padding: 20px;
   }
-  h1 {
-    font-size: 2.5vw;
-  }
-  p {
-    font-size: 1.5vw;
-  }
-  .canciones h2 {
-    text-align: left;
-    font-size: 32px;
-    margin: 1%;
-  }
-  audio {
-    margin: 3%;
-    padding: 0%;
-  }
-  .conciertos img {
-    height: 19em;
-    width: 25em;
-  }
-  .conciertos a {
-    font-size: 1.5em;
-  }
 }
-.noticias h2 {
-  color: white;
-  text-align: left;
-  font-size: 30px;
-  margin: 2%;
-}
-
-.noticias h3 {
-  text-align: left;
-  font-size: 25px;
-  margin: 2%;
-}
-
 .historia img {
   width: 98%;
   height: auto;
@@ -219,11 +239,24 @@ header {
 .container-footer {
   padding: 4px;
   margin-bottom: 0;
-  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(68, 68, 68) 65%, rgb(162, 162, 162) 100%);
+  background: rgb(97, 97, 97);
+  background: radial-gradient(circle, rgb(97, 97, 97) 0%, rgb(0, 0, 0) 62%);
   color: white;
+}
+@media (min-width: 600px) {
+  .container-footer h2 {
+    text-align: start;
+  }
 }
 .container-footer ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 600px) {
+  .container-footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }/*# sourceMappingURL=style.css.map */

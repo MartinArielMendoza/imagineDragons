@@ -9,6 +9,10 @@
         margin: 10px;
         height: 10em;
         width: 15em;
+        @media(min-width: 768px) {
+            height: 25em;
+            width: 32em;
+        }
     }
     .indicaciones {
         font-size: 24px;
@@ -18,5 +22,8 @@
         text-decoration: underline;
         font-size: 1em;
         padding: 25px;
+        @media(min-width: 600px) {
+            font-size: 1.5em;
+        }
     }
 }

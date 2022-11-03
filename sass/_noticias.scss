@@ -1,0 +1,30 @@
+.noticias {
+    h2 {
+        color: white;
+        text-align: left;
+        font-size: 2em;
+        margin: 2%;
+    }
+    p {
+        font-size: 1em;
+        margin: 15px;
+        padding: 10px;
+    }
+    .pasados {
+        text-decoration: $text-decoretion;
+        color: $color;
+    }
+    .proximos {
+        color: $color;
+    }
+    h3 {
+        color: #FFC300;
+        text-align: left;
+        font-size: 1.5em;
+        margin: 2%;
+    }
+    p {
+        font-size: 1.2em;
+        margin: 2%;
+    }
+}
